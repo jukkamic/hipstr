@@ -31,7 +31,7 @@
              :migration-table-name "_migrations"
              :db {:classname "org.postgresql.Driver"
                   :subprotocol "postgresql"
-                  :subname "//localhost/postgres"
+                  :subname (or (System/getenv "DATABASE_URL") "//localhost/postgres")
                   :user "hipstr"
                   :password "hipstr"}}
   :ring {:handler hipstr.handler/app
