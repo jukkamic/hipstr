@@ -1,0 +1,1 @@
+(do (clojure.core/ns hipstr.listener (:require hipstr.handler) (:gen-class :implements [javax.servlet.ServletContextListener])) (do (clojure.core/defn -contextInitialized [this__1463__auto__ G__1571] (hipstr.handler/init)) (clojure.core/defn -contextDestroyed [this__1463__auto__ G__1571] (hipstr.handler/destroy))))
