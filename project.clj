@@ -32,8 +32,8 @@
              :db {:classname "org.postgresql.Driver"
                   :subprotocol "postgresql"
                   :subname (or (System/getenv "DATABASE_URL") "//localhost/postgres")
-                  :user "hipstr"
-                  :password "hipstr"}}
+                  :user (or (System/getenv "JDBC_DATABASE_USERNAME") "hipstr")
+                  :password (or (System/getenv "JDBC_DATABASE_PASSWORD") "hipstr")}}
   :ring {:handler hipstr.handler/app
          :init    hipstr.handler/init
          :destroy hipstr.handler/destroy}
