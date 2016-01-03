@@ -27,19 +27,6 @@
             [migratus-lein "0.1.0"]
             [quickie "0.3.6"]]
   :migratus {:store :database}
-;             :migration-dir "migrations"
-;             :migration-table-name "_migrations"
-;             :db ~(get (System/getenv) "DATABASE_URL")}
-             ;:db {:classname "org.postgresql.Driver"
-                  ;:subprotocol "postgresql"
-                  ;;:subname (or (System/getenv "DATABASE_URL") "//localhost/postgres")
-		              ;:subname "//ec2-107-22-170-249.compute-1.amazonaws.com:5432/d3qe27609gdkmm"
-              ;    :subprotocol ""
-              ;    :subname (env :database-url)
-              ;    :user (env :jdbc-database-username)
-              ;    :password (env :jdbc-database-password)}}
-                  ;:user (or (System/getenv "JDBC_DATABASE_USERNAME") "hipstr")
-                  ;:password (or (System/getenv "JDBC_DATABASE_PASSWORD") "hipstr")}}
   :ring {:handler hipstr.handler/app
          :init    hipstr.handler/init
          :destroy hipstr.handler/destroy}
