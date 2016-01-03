@@ -7,6 +7,6 @@
 	      	  ;:subname "//ec2-107-22-170-249.compute-1.amazonaws.com:5432/d3qe27609gdkmm"
               ;:user        (or (System/getenv "JDBC_DATABASE_USERNAME") "hipstr")
               ;:password    (or (System/getenv "JDBC_DATABASE_PASSWORD") "hipstr")})
-	      	  :subname (env :jdbc-database-url)
+	      	  :subname (env :database-url)
               :user        (env :jdbc-database-username)
 			  :password    (env :jdbc-database-password)})
