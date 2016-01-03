@@ -26,10 +26,10 @@
             [lein-ancient "0.5.5"]
             [migratus-lein "0.1.0"]
             [quickie "0.3.6"]]
-  :migratus {:store :database
-             :migration-dir "migrations"
-             :migration-table-name "_migrations"
-             :db ~(get (System/getenv) "DATABASE_URL")}
+  :migratus {:store :database}
+;             :migration-dir "migrations"
+;             :migration-table-name "_migrations"
+;             :db ~(get (System/getenv) "DATABASE_URL")}
              ;:db {:classname "org.postgresql.Driver"
                   ;:subprotocol "postgresql"
                   ;;:subname (or (System/getenv "DATABASE_URL") "//localhost/postgres")
