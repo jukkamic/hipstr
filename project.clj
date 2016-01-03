@@ -35,7 +35,7 @@
 		              :subname "//ec2-107-22-170-249.compute-1.amazonaws.com:5432/d3qe27609gdkmm"
                   ;:subname (System/getenv "JDBC_DATABASE_URL")
                   :user        (env :jdbc-database-username)
-                  :password    (env :jdbc-database-password)
+                  :password    (env :jdbc-database-password)}}
                   ;:user (or (System/getenv "JDBC_DATABASE_USERNAME") "hipstr")
                   ;:password (or (System/getenv "JDBC_DATABASE_PASSWORD") "hipstr")}}
   :ring {:handler hipstr.handler/app
