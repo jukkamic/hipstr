@@ -22,7 +22,7 @@
   {:store :database
    :migration-dir "migrations"
    :migration-table-name "_migrations"
-   :db (env :database-url)})
+   :db db-spec})
 
 (defroutes base-routes
   (route/resources "/")
