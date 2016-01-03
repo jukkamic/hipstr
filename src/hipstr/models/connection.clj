@@ -1,7 +1,7 @@
 (ns hipstr.models.connection
   (:require [environ.core :refer [env]]))
 
-(def db-spec {~(get (System/getenv) "DATABASE_URL")})
+(def db-spec (get (System/getenv) "DATABASE_URL"))
 ;{
 
 
