@@ -22,7 +22,7 @@
   {:store :database
    :migration-dir "migrations"
    :migration-table-name "_migrations"
-   :db ~(get (System/getenv) "DATABASE_URL")})
+   :db (env :database-url))
 
 (defroutes base-routes
   (route/resources "/")
